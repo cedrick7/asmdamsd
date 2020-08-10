@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+<title>Bezahlen</title>
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/cashbox_pay.css' %}" />
+{% endblock specific %}
+
+<!-- Body -->
+{% block content %}
+<div class="page">
+    <section class="container nav">
+      <div class="row nav-row">
+        <div class="col nav-col"><a href="#"><i class="fa fa-chevron-left"></i>Logout</a></div>
+        <div class="col nav-col"><a href="#">Kundenkartei</a></div>
+        <div class="col nav-col"><a href="#" style="cursor:default;">Mitarbeitername</a></div>
+      </div>
+    </section>
+    <section class="row content">
+      <div class="col-8">
+        <div class="row">
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/5.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/10.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/20.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/50.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/100.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/200.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/500.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/2.gif);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/1.gif);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/50c.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/20c.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/10c.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/5c.png);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/2c.png);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/1c.png);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <a href="#" class="col-3 coin" style="background-image: url(assets/img/Gutschein.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;"></a>
+          <div class="col-12">
+            <hr />
+          </div>
+          <div class="col-12 paying-summary">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 paying-summary-1">
+                  <table>
+                    <tr>
+                      <td>Netto-Betrag:</td>
+                      <td><span id="" class="">32,40</span>€</td>
+                    </tr>
+                    <tr>
+                      <td>Brutto-Betrag:</td>
+                      <td><span id="" class="">39,99</span>€</td>
+                    </tr>
+                    <tr>
+                      <td>MwSt-Satz:</td>
+                      <td><span id="" class="">19</span>%</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="col-6 paying-summary-2">
+                  <table>
+                    <tr>
+                      <td>Zu bezahlender Betrag:</td>
+                      <td><span id="" class="get-cart-result-price">39,98</span>€</td>
+                    </tr>
+                    <tr>
+                      <td>Eingegeben:</td>
+                      <td><span id="" class="">20,00</span>€</td>
+                    </tr>
+                    <tr>
+                      <td>Offener Betrag:</td>
+                      <td><span id="" class="">19,99</span>€</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <div class="col">
+            <div class="row cart">
+              <div class="col-12">
+                <p class="cart-header">Warenkorb</p>
+              </div>
+              <div class="col-12 card-row cart-element">
+                <p class="card-element cart-element-quantity">1x</p>
+                <p class="card-element cart-element-name">D1</p>
+                <p class="card-element cart-element-price">19.99€</p>
+                <a class="card-element cart-element-delete" href="#">
+                  <i class="fa fa-remove card-element"></i>
+                </a>
+              </div>
+              <div class="col-12 card-row cart-element">
+                <p class="card-element cart-element-quantity">1x</p>
+                <p class="card-element cart-element-name">D2</p>
+                <p class="card-element cart-element-price">19.99€</p>
+                <a class="card-element cart-element-delete" href="#">
+                  <i class="fa fa-remove card-element"></i>
+                </a>
+              </div>
+              <div class="col-12 card-row cart-result">
+                <p class="card-element cart-result-price">Gesamt: <span class="get-cart-result-price">39,98</span>€</p>
+                <a class="card-element cart-result-continue" href="#">Zur Kasse gehen<i class="fa fa-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="row calculator">
+              <div class="col-12">
+                <p class="calculator-header">Taschenrechner</p>
+              </div>
+              <div class="col-12">
+                <form class="calculator-form">
+                  <input type="text" id="calc-display" />
+                  <br></br>
+                  <input type="button" class="keys" value="7" onclick="addToScreen('7')" />
+                  <input type="button" class="keys" value="8" onclick="addToScreen('8')" />
+                  <input type="button" class="keys" value="9" onclick="addToScreen('9')" />
+                  <input type="button" class="keys" value="C" onclick="addToScreen('c')" />
+                  <input type="button" class="keys" value="CE" onclick="backspace()" />
+                  <br></br>
+                  <input type="button" class="keys" value="4" onclick="addToScreen('4')" />
+                  <input type="button" class="keys" value="5" onclick="addToScreen('5')" />
+                  <input type="button" class="keys" value="6" onclick="addToScreen('6')" />
+                  <input type="button" class="keys" value="*" onclick="addToScreen('*')" />
+                  <input type="button" class="keys" value="/" onclick="addToScreen('/')" />
+                  <br></br>
+                  <input type="button" class="keys" value="1" onclick="addToScreen('1')" />
+                  <input type="button" class="keys" value="2" onclick="addToScreen('2')" />
+                  <input type="button" class="keys" value="3" onclick="addToScreen('3')" />
+                  <input type="button" class="keys" value="+" onclick="addToScreen('+')" />
+                  <input type="button" class="keys" value="-" onclick="addToScreen('-')" />
+                  <br></br>
+                  <input type="button" class="keys" value="0" onclick="addToScreen('0')" />
+                  <input type="button" class="keys" value="." onclick="addToScreen('.')" />
+                  <input type="button" class="equal" id="key-result" value="=" onclick="result()" />
+                  <a id="toCart" class="keys" onclick="return calculatorToCart();"><i class="fas fa-shopping-cart"></i></a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock content %}

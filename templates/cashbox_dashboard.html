@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+<title>Kasse</title>
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/cashbox_dashboard.css' %}" />
+{% endblock specific %}
+
+<!-- Body -->
+{% block content %}
+<div class="page">
+    <section class="container nav">
+      <div class="row nav-row">
+        <div class="col nav-col"><a href="#"><i class="fa fa-chevron-left"></i>Logout</a></div>
+        <div class="col nav-col"><a href="#">Kundenkartei</a></div>
+        <div class="col nav-col"><a href="#" style="cursor:default;">Mitarbeitername</a></div>
+      </div>
+    </section>
+    <section class="row content">
+      <div class="col-8">
+        <div class="row">
+          <div class="col-6 select-category-1">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Alle</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Damen</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Herren</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4"><label class="form-check-label" for="formCheck-4">Kinder</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"><label class="form-check-label" for="formCheck-5">Colorationen</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-6"><label class="form-check-label" for="formCheck-6">Specials</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7"><label class="form-check-label" for="formCheck-7">Sonstiges</label></div>
+          </div>
+          <div class="col-6 select-category-2" style="padding: 10px;">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Alle</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Dienstleistungen</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Produkte</label></div>
+          </div>
+          <div class="col-12">
+            <div class="row pattern">
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D1</p>
+                <p class="product-description">Waschen, Föhnen inkl. Festiger + Spray</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D2</p>
+                <p class="product-description">Waschen, Schneiden</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D3</p>
+                <p class="product-description">Waschen, Schneiden, Föhnen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D4</p>
+                <p class="product-description">Neuschnitt/Styling</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D5</p>
+                <p class="product-description">Waschen, Einlegen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D6</p>
+                <p class="product-description">Waschen, Schneiden, Einlegen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D1</p>
+                <p class="product-description">Waschen, Föhnen inkl. Festiger + Spray</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D2</p>
+                <p class="product-description">Waschen, Schneiden</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D3</p>
+                <p class="product-description">Waschen, Schneiden, Föhnen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D4</p>
+                <p class="product-description">Neuschnitt/Styling</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D5</p>
+                <p class="product-description">Waschen, Einlegen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D6</p>
+                <p class="product-description">Waschen, Schneiden, Einlegen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <div class="col">
+            <div class="row cart">
+              <div class="col-12">
+                <p class="cart-header">Warenkorb</p>
+              </div>
+              <div class="col-12 card-row cart-element">
+                <p class="card-element cart-element-quantity">1x</p>
+                <p class="card-element cart-element-name">D1</p>
+                <p class="card-element cart-element-price">19.99€</p>
+                <a class="card-element cart-element-delete" href="#">
+                  <i class="fa fa-remove card-element"></i>
+                </a>
+              </div>
+              <div class="col-12 card-row cart-element">
+                <p class="card-element cart-element-quantity">1x</p>
+                <p class="card-element cart-element-name">D2</p>
+                <p class="card-element cart-element-price">19.99€</p>
+                <a class="card-element cart-element-delete" href="#">
+                  <i class="fa fa-remove card-element"></i>
+                </a>
+              </div>
+              <div class="col-12 card-row cart-result">
+                <p class="card-element cart-result-price">Gesamt: <span class="get-cart-result-price">39,98</span>€</p>
+                <a class="card-element cart-result-continue" href="#">Zur Kasse gehen<i class="fa fa-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="row calculator">
+              <div class="col-12">
+                <p class="calculator-header">Taschenrechner</p>
+              </div>
+              <div class="col-12">
+                <form class="calculator-form">
+                  <input type="text" id="calc-display" />
+                  <br />
+                  <input type="button" class="keys" value="7" onclick="addToScreen('7')" />
+                  <input type="button" class="keys" value="8" onclick="addToScreen('8')" />
+                  <input type="button" class="keys" value="9" onclick="addToScreen('9')" />
+                  <input type="button" class="keys" value="C" onclick="addToScreen('c')" />
+                  <input type="button" class="keys" value="CE" onclick="backspace()" />
+                  <br />
+                  <input type="button" class="keys" value="4" onclick="addToScreen('4')" />
+                  <input type="button" class="keys" value="5" onclick="addToScreen('5')" />
+                  <input type="button" class="keys" value="6" onclick="addToScreen('6')" />
+                  <input type="button" class="keys" value="*" onclick="addToScreen('*')" />
+                  <input type="button" class="keys" value="/" onclick="addToScreen('/')" />
+                  <br />
+                  <input type="button" class="keys" value="1" onclick="addToScreen('1')" />
+                  <input type="button" class="keys" value="2" onclick="addToScreen('2')" />
+                  <input type="button" class="keys" value="3" onclick="addToScreen('3')" />
+                  <input type="button" class="keys" value="+" onclick="addToScreen('+')" />
+                  <input type="button" class="keys" value="-" onclick="addToScreen('-')" />
+                  <br />
+                  <input type="button" class="keys" value="0" onclick="addToScreen('0')" />
+                  <input type="button" class="keys" value="." onclick="addToScreen('.')" />
+                  <input type="button" class="equal" id="key-result" value="=" onclick="result()" />
+                  <a id="toCart" class="keys" onclick="return calculatorToCart();"><i class="fas fa-shopping-cart"></i></a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock content %}
