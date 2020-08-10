@@ -14,8 +14,8 @@
     <section class="container nav">
       <div class="row nav-row">
         <div class="col nav-col"><a href="#"><i class="fa fa-chevron-left"></i>Logout</a></div>
-        <div class="col nav-col"><a href="#">Kundenkartei</a></div>
-        <div class="col nav-col"><a href="#" style="cursor:default;">Mitarbeitername</a></div>
+        <div class="col nav-col"><a href="{% url 'costumer' %}">Kundenkartei</a></div>
+        <div class="col nav-col"><a href="{% url 'profile' %}">Mitarbeitername</a></div>
       </div>
     </section>
     <section class="row content">
@@ -126,7 +126,7 @@
               </div>
               <div class="col-12 card-row cart-result">
                 <p class="card-element cart-result-price">Gesamt: <span class="get-cart-result-price">39,98</span>€</p>
-                <a class="card-element cart-result-continue" href="#">Zur Kasse gehen<i class="fa fa-chevron-right"></i></a>
+                <a class="card-element cart-result-continue" href="{% url 'pay' %}">Zur Kasse gehen<i class="fa fa-chevron-right"></i></a>
               </div>
             </div>
             <div class="row calculator">

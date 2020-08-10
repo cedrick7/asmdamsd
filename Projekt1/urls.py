@@ -18,7 +18,9 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from pages.views import login_view, register_view, forgot_password_view, cashbox_dashboard_view, cashbox_pay_view, admin_dashboard_view, analyst_dashboard_view
+from pages.views import login_view, register_view, forgot_password_view,\
+                        cashbox_dashboard_view, cashbox_pay_view, costumer_view, profile_view,\
+                        admin_dashboard_view, analyst_dashboard_view
 
 urlpatterns = [
     path('', login_view, name='login'),
@@ -26,6 +28,8 @@ urlpatterns = [
     path('forgot-password/', forgot_password_view, name='forgot-password'),
     path('kasse/', cashbox_dashboard_view, name='cashbox_dashboard'),
     path('pay/', cashbox_pay_view, name='pay'),
+    path('costumer/', costumer_view, name='costumer'),
+    path('profile/', profile_view, name='profile'),
     path('admin/', admin_dashboard_view, name='admin_dashboard'),
     path('analyst/', analyst_dashboard_view, name='analyst_dashboard'),
     path('admin/', admin.site.urls),

@@ -29,6 +29,12 @@ def cashbox_pay_view(request, *args, **kwargs):
         # request.user.is_authenticated == true ?
     return render(request, "cashbox_pay.html", {})
 
+def costumer_view(request, *args, **kwargs):
+    return render(request, "costumer.html", {})
+
+def profile_view(request, *args, **kwargs):
+    return render(request, "profile.html", {})
+
 def admin_dashboard_view(request, *args, **kwargs):
     # request.user --> @admin only!
         # request.user.is_authenticated == true ?
