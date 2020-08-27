@@ -19,20 +19,51 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from pages.views import login_view, register_view, forgot_password_view,\
-                        cashbox_dashboard_view, cashbox_pay_view, costumer_view, profile_view,\
-                        admin_dashboard_view, analyst_dashboard_view
+                        costumer_view, profile_view,\
+                        cashbox_dashboard_view, cashbox_pay_view, cashbox_more_view,\
+                        admin_dashboard_view, admin_products_view, admin_products_detail_view, admin_services_view, admin_services_detail_view, admin_categories_view, admin_categories_detail_view, admin_attributes_view, admin_attributes_detail_view, admin_discounts_view, admin_discounts_detail_view, admin_employees_view, admin_employees_detail_view, admin_invoices_view, admin_invoices_detail_view, admin_services_view, admin_services_detail_view, admin_cashboxes_view, admin_safes_view, admin_backups_view, admin_backups_detail_view, admin_payments_view, admin_requests_view,\
+                        analyst_dashboard_view, analyst_sales_view, analyst_costumers_view, analyst_employees_view
 
 urlpatterns = [
     path('', login_view, name='login'),
     path('register/', register_view, name='register'),
     path('forgot-password/', forgot_password_view, name='forgot-password'),
-    path('kasse/', cashbox_dashboard_view, name='cashbox_dashboard'),
-    path('pay/', cashbox_pay_view, name='pay'),
+
     path('costumer/', costumer_view, name='costumer'),
     path('profile/', profile_view, name='profile'),
+
+    path('kasse/', cashbox_dashboard_view, name='cashbox_dashboard'),
+    path('kasse/pay/', cashbox_pay_view, name='pay'),
+    path('kasse/more/', cashbox_more_view, name='more'),
+
     path('admin/', admin_dashboard_view, name='admin_dashboard'),
+    path('admin/products/', admin_products_view, name='admin_products'),
+    path('admin/products/detail/', admin_products_detail_view, name='admin_products_detail'),
+    path('admin/services/', admin_services_view, name='admin_services'),
+    path('admin/services/detail/', admin_services_detail_view, name='admin_services_detail'),
+    path('admin/categories/', admin_categories_view, name='admin_categories'),
+    path('admin/categories/detail/', admin_categories_detail_view, name='admin_categories_detail'),
+    path('admin/attributes/', admin_attributes_view, name='admin_attributes'),
+    path('admin/attributes/detail/', admin_attributes_detail_view, name='admin_attributes_detail'),
+    path('admin/discounts/', admin_discounts_view, name='admin_discounts'),
+    path('admin/discounts/detail/', admin_discounts_detail_view, name='admin_discounts_detail'),
+    path('admin/employees/', admin_employees_view, name='admin_employees'),
+    path('admin/employees/detail/', admin_employees_detail_view, name='admin_employees_detail'),
+    path('admin/invoices/', admin_invoices_view, name='admin_invoices'),
+    path('admin/invoices/detail/', admin_invoices_detail_view, name='admin_invoices_detail'),
+    path('admin/cashboxes/', admin_cashboxes_view, name='admin_cashboxes'),
+    path('admin/safes/', admin_safes_view, name='admin_safes'),
+    path('admin/backups/', admin_backups_view, name='admin_backups'),
+    path('admin/backups/detail/', admin_backups_detail_view, name='admin_backups_detail'),
+    path('admin/payments/', admin_payments_view, name='admin_payments'),
+    path('admin/requests/', admin_requests_view, name='admin_requests'),
+
     path('analyst/', analyst_dashboard_view, name='analyst_dashboard'),
-    path('admin/', admin.site.urls),
+    path('analyst/sales/', analyst_sales_view, name='analyst_sales'),
+    path('analyst/costumers/', analyst_costumers_view, name='analyst_costumers'),
+    path('analyst/employees/', analyst_employees_view, name='analyst_employees'),
+
+    path('superuser/', admin.site.urls),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

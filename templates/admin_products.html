@@ -19,13 +19,17 @@
 <section id="body">
     <div class="heading container-fluid">
         <!-- change this content -->
-        <h3>Dashboard</h3>
+        <h3>Produkte</h3>
+        <a class="btn btn-primary" role="button" href="#">
+            <i class="fas fa-download fa-sm"></i>&nbsp;
+            <!-- change this content -->
+            Alle Produkte ausdrucken</a>
     </div>
     <div class="content container-fluid">
         <div class="card">
             <div class="card-header">
               <!-- change this content -->
-              <p>Logs diesen Monat</p>
+              <p>Produkte Übersicht</p>
             </div>
             <div class="card-body">
               <div class="card-row-1 row">
@@ -53,45 +57,55 @@
                 <div class="col-12">
                     <!-- change this content -->
                     <div class="table-responsive table" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
-                        <table class="table" id="logsTable">
-                          <thead>
-                            <tr></tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald ERROR&nbsp;ivc socket mtsclient.cpp 1923 0x00000c40&nbsp;Could not connect to the server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald connect to the server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald ivc socket mtsclient.cpp 1923 0x00000c40, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald ERROR&nbsp;ivc socket mtsclient.cpp 1923 0x00000c40&nbsp;Could not connect to the server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald connect to the server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354Aasd1E webseald ERROR&nbsp;ivc socket mtsclient.cpp 1923 0x00000c40, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald ivc socket mtsclient.cpp 1923 0x00000c40&nbsp;Coud server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald connect to the server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E ERROR&nbsp;ivc socket mtsclient.cpp 1923 0x00000c40, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E ivc socket mtsclient.cpp 1923 0x00000c40, on port 7135.&nbsp;</td>
-                            </tr>
-                          </tbody>
-                          <tfoot>
-                            <tr></tr>
-                          </tfoot>
+                        <table class="table" id="productsTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Beschreibung</th>
+                                    <th>Preis</th>
+                                    <th>Startdatum</th>
+                                    <th>Mehr...</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>D1</td>
+                                    <td>Schneiden, Waschen, ...</td>
+                                    <td>29.99€</td>
+                                    <td>01.01.2020</td>
+                                    <td class="td-icons"><a href="service-detail.html"><i class="fa fa-pencil"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>D2</td>
+                                    <td>Schneiden, Föhnen, Waschen, ...</td>
+                                    <td>39.99€</td>
+                                    <td>01.01.2020</td>
+                                    <td class="td-icons"><a href="service-detail.html"><i class="fa fa-pencil"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>D3</td>
+                                    <td>Waschen, Föhnen, ...</td>
+                                    <td>49.99€</td>
+                                    <td>01.01.2020</td>
+                                    <td class="td-icons"><a href="service-detail.html"><i class="fa fa-pencil"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>D4</td>
+                                    <td>Dauerwelle, Waschen, ...</td>
+                                    <td>45.99€</td>
+                                    <td>01.01.2020</td>
+                                    <td class="td-icons"><a href="service-detail.html"><i class="fa fa-pencil"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><strong>Name</strong></td>
+                                    <td><strong>Beschreibung</strong></td>
+                                    <td><strong>Preis</strong></td>
+                                    <td><strong>Startdatum</strong></td>
+                                    <td><strong>Mehr...</strong></td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>

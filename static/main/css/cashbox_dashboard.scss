@@ -1,65 +1,44 @@
-$color-font: #6D6B6B;
-$color-attention: #F52E45;
-$header-size: 1.7em;
+@import 'variables.scss';
+
+// media-queries:
+//@media (min-width: 576px) { ... }   // Small devices (landscape phones, 576px and up)
+//@media (min-width: 768px) { ... }   // Medium devices (tablets, 768px and up)
+//@media (min-width: 992px) { ... }   // Large devices (desktops, 992px and up)
+//@media (min-width: 1200px) { ... }  // Extra large devices (large desktops, 1200px and up)
 
 body {
-  color: #6D6B6B;
 
-  .page {
-    max-width: 99%!important;
-    padding: 0 10px;
+  #body {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
 
-    .nav {
-      margin-top: 10px;
-      margin-bottom: 10px;
+    .container {
+      &:nth-child(1) {
+        order: 2;
+        @media (min-width: 992px) {
+          order: 1;
+        }
 
-      .nav-row {
-        height: 100px;
-        width: 100%;
-
-        .nav-col {
-          text-align: center;
+        .pattern {
           display: flex;
-          flex-direction: column;
+          flex-wrap: wrap;
           justify-content: center;
           align-items: center;
 
-          a {
-            color: $color-font;
-            font-size: 1.8em;
-            text-decoration: none;
-
-            i {
-              padding-right: 10px;
-            }
-          }
-        }
-      }
-    }
-
-    .content {
-      display: flex;
-
-      .select-category-1 {}
-
-      .select-category-2 {}
-
-      .pattern {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-
         .pattern-element {
-          color: #000;
-          text-align: center;
-          text-decoration: none;
           height: 200px;
           padding: 5px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          align-content: center;
+          color: $color-black;
+          text-align: center;
+          text-decoration: none;
 
           &:nth-child(1) {
             background-color: #8fc4f5;
@@ -128,174 +107,11 @@ body {
           }
         }
       }
-
-      .cart {
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding-left: 20px;
-
-        .cart-header {
-          font-size: $header-size;
-        }
-
-        .cart-element {
-          height: 50px;
-          border: 1px solid #000;
-          border-radius: 10px;
-          margin-bottom: 5px;
-          padding-top: 8px;
-          padding-bottom: 10px;
-          font-size: 1.3em;
-
-          .card-element {
-            display: inline-block;
-          }
-
-          .cart-element-quantity {
-            padding-right: 10px;
-          }
-
-          .cart-element-name {
-            padding-right: 10px;
-          }
-
-          .cart-element-price {
-            padding-right: 10px;
-          }
-
-          .cart-element-delete {
-            color: $color-attention;
-            text-decoration: none;
-          }
-        }
-
-        .cart-result {
-          min-height: 50px;
-          border: 1px solid #000;
-          border-radius: 10px;
-          background-color: #C6C6C6;
-          margin-top: 20px;
-          margin-bottom: 20px;
-          padding-top: 8px;
-          padding-bottom: 10px;
-          font-size: 1.3em;
-
-          .card-element {}
-
-          .cart-result-price {
-            color: #000;
-          }
-
-          .cart-result-continue {
-            color: #000;
-            text-decoration: none;
-
-            i {
-              padding-left: 5px;
-            }
-          }
-        }
       }
-
-      .calculator {
-        .calculator-header {
-          font-size: $header-size;
-          text-align: center;
-        }
-
-        .calculator-form {
-          padding-top: 30px;
-          padding-bottom: 30px;
-          width: 100%;
-          height: auto;
-          border-top: 1px solid black;
-          margin: 0 auto;
-          text-align: center;
-          background: #e2e2e2;
-
-          #calc-display {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-left: 10px;
-            height: 30px;
-            width: 260px;
-            text-align: right;
-            border: 1px solid black;
-            box-shadow: 0 0 15px grey;
-            font-size: 20px;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: bold;
-            // letter-spacing: 0.1em;
-            color: #000;
-          }
-
-          a,
-          input {
-            border: none;
-          }
-
-          #toCart {
-            width: 40px;
-            height: 35px;
-            padding: 5px;
-            margin-left: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 5px gray;
-            cursor: pointer;
-            background-color: #fff;
-            outline-style: none;
-            font-size: 21px;
-            border-radius: 5px;
-
-            &:active,
-            &:focus,
-            &:hover {
-              background: #ccc;
-              color: #fff;
-            }
-          }
-
-          .keys {
-            width: 40px;
-            height: 35px;
-            margin-left: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 5px gray;
-            cursor: pointer;
-            background-color: #fff;
-            outline-style: none;
-            font-size: 17px;
-            border-radius: 5px;
-          }
-
-          #key-result {
-            width: 95px;
-          }
-
-          .equal:hover,
-          .keys:hover {
-            background: #ccc;
-            color: #fff;
-            font-weight: bold;
-          }
-
-          .equal:focus,
-          .keys:focus {
-            border: 0.5px dashed black;
-          }
-
-          .equal {
-            margin-left: 13px;
-            font-size: 1em;
-            width: 90px;
-            height: 35px;
-            cursor: pointer;
-            outline-style: none;
-            border-radius: 5px;
-          }
+      &:nth-child(2) {
+        order: 1;
+        @media (min-width: 992px) {
+          order: 2;
         }
       }
     }

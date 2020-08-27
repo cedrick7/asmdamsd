@@ -1,198 +1,82 @@
-body {
-  color: #6D6B6B;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+.btn-primary {
+  background-color: #007bff;
 }
-body .page {
-  max-width: 99% !important;
-  padding: 0 10px;
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #00299C;
 }
-body .page .nav {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.btn-primary:active {
+  background-color: #0043E0;
 }
-body .page .nav .nav-row {
-  height: 100px;
-  width: 100%;
-}
-body .page .nav .nav-row .nav-col {
-  text-align: center;
+
+body #body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-body .page .nav .nav-row .nav-col a {
-  color: #6D6B6B;
-  font-size: 1.8em;
-  text-decoration: none;
+@media (min-width: 992px) {
+  body #body {
+    flex-direction: row;
+  }
 }
-body .page .nav .nav-row .nav-col a i {
-  padding-right: 10px;
+body #body .container:nth-child(1) {
+  order: 2;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
 }
-body .page .content {
-  display: flex;
+@media (min-width: 992px) {
+  body #body .container:nth-child(1) {
+    order: 1;
+  }
 }
-body .page .content .coin {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 20px solid white;
-  width: auto;
-  height: 160px;
-  padding: 0;
-}
-body .page .content .paying-summary-1,
-body .page .content .paying-summary-2 {
+body #body .container:nth-child(1) .col:nth-child(1) .row-coins .col-coin {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-body .page .content .paying-summary-1 table tr td,
-body .page .content .paying-summary-2 table tr td {
+  align-content: center;
   padding: 10px;
 }
-body .page .content .paying-summary-1 table tr td:nth-child(2),
-body .page .content .paying-summary-2 table tr td:nth-child(2) {
-  text-align: right;
+body #body .container:nth-child(1) .col:nth-child(1) .row-coins .col-coin:hover {
+  opacity: 0.7;
 }
-body .page .content .cart {
-  text-align: center;
+body #body .container:nth-child(1) .col:nth-child(1) .row-coins .col-coin .coin {
+  width: 200px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body #body .container:nth-child(1) .col:nth-child(2), body #body .container:nth-child(1) .col:nth-child(3) {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid #dfdfdf;
+}
+body #body .container:nth-child(1) .col:nth-child(2) .row, body #body .container:nth-child(1) .col:nth-child(3) .row {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-left: 20px;
+  align-content: center;
 }
-body .page .content .cart .cart-header {
-  font-size: 1.7em;
-}
-body .page .content .cart .cart-element {
-  height: 50px;
-  border: 1px solid #000;
-  border-radius: 10px;
-  margin-bottom: 5px;
-  padding-top: 8px;
-  padding-bottom: 10px;
-  font-size: 1.3em;
-}
-body .page .content .cart .cart-element .card-element {
-  display: inline-block;
-}
-body .page .content .cart .cart-element .cart-element-quantity {
-  padding-right: 10px;
-}
-body .page .content .cart .cart-element .cart-element-name {
-  padding-right: 10px;
-}
-body .page .content .cart .cart-element .cart-element-price {
-  padding-right: 10px;
-}
-body .page .content .cart .cart-element .cart-element-delete {
-  color: #F52E45;
-  text-decoration: none;
-}
-body .page .content .cart .cart-result {
-  min-height: 50px;
-  border: 1px solid #000;
-  border-radius: 10px;
-  background-color: #C6C6C6;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 8px;
-  padding-bottom: 10px;
-  font-size: 1.3em;
-}
-body .page .content .cart .cart-result .cart-result-price {
-  color: #000;
-}
-body .page .content .cart .cart-result .cart-result-continue {
-  color: #000;
-  text-decoration: none;
-}
-body .page .content .cart .cart-result .cart-result-continue i {
-  padding-left: 5px;
-}
-body .page .content .calculator .calculator-header {
-  font-size: 1.7em;
-  text-align: center;
-}
-body .page .content .calculator .calculator-form {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  width: 100%;
-  height: auto;
-  border-top: 1px solid black;
-  margin: 0 auto;
-  text-align: center;
-  background: #e2e2e2;
-}
-body .page .content .calculator .calculator-form #calc-display {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  height: 30px;
-  width: 260px;
+body #body .container:nth-child(1) .col:nth-child(2) .row .col-12, body #body .container:nth-child(1) .col:nth-child(3) .row .col-12 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
   text-align: right;
-  border: 1px solid black;
-  box-shadow: 0 0 15px grey;
-  font-size: 20px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  color: #000;
 }
-body .page .content .calculator .calculator-form a,
-body .page .content .calculator .calculator-form input {
-  border: none;
+body #body .container:nth-child(1) .col:nth-child(2) .row .col-12 p, body #body .container:nth-child(1) .col:nth-child(3) .row .col-12 p {
+  margin: 0;
 }
-body .page .content .calculator .calculator-form #toCart {
-  width: 40px;
-  height: 35px;
-  padding: 5px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 5px gray;
-  cursor: pointer;
-  background-color: #fff;
-  outline-style: none;
-  font-size: 21px;
-  border-radius: 5px;
+body #body .container:nth-child(1) .col:nth-child(2) .row .col-12 .p-bold, body #body .container:nth-child(1) .col:nth-child(3) .row .col-12 .p-bold {
+  font-weight: 700;
 }
-body .page .content .calculator .calculator-form #toCart:active, body .page .content .calculator .calculator-form #toCart:focus, body .page .content .calculator .calculator-form #toCart:hover {
-  background: #ccc;
-  color: #fff;
+body #body .container:nth-child(2) {
+  order: 1;
 }
-body .page .content .calculator .calculator-form .keys {
-  width: 40px;
-  height: 35px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 5px gray;
-  cursor: pointer;
-  background-color: #fff;
-  outline-style: none;
-  font-size: 17px;
-  border-radius: 5px;
-}
-body .page .content .calculator .calculator-form #key-result {
-  width: 95px;
-}
-body .page .content .calculator .calculator-form .equal:hover,
-body .page .content .calculator .calculator-form .keys:hover {
-  background: #ccc;
-  color: #fff;
-  font-weight: bold;
-}
-body .page .content .calculator .calculator-form .equal:focus,
-body .page .content .calculator .calculator-form .keys:focus {
-  border: 0.5px dashed black;
-}
-body .page .content .calculator .calculator-form .equal {
-  margin-left: 13px;
-  font-size: 1em;
-  width: 90px;
-  height: 35px;
-  cursor: pointer;
-  outline-style: none;
-  border-radius: 5px;
+@media (min-width: 992px) {
+  body #body .container:nth-child(2) {
+    order: 2;
+  }
 }
 
 /*# sourceMappingURL=cashbox_pay.css.map */

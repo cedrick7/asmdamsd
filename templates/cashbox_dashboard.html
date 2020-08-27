@@ -5,38 +5,22 @@
 <!-- Head -->
 {% block specific %}
 <title>Kasse</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/cashbox_navbar.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'main/css/cashbox_dashboard.css' %}" />
-<script type="text/javascript" src="{% static 'main/js/calculate.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/cart-calculator.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/calculator.css' %}" />
 {% endblock specific %}
 
 <!-- Body -->
+{% block navbar %}
+    {% include 'cashbox_navbar.html' %}
+{% endblock navbar %}
+
 {% block content %}
-<div class="page">
-    <section class="container nav">
-      <div class="row nav-row">
-        <div class="col nav-col"><a href="#"><i class="fa fa-chevron-left"></i>Logout</a></div>
-        <div class="col nav-col"><a href="{% url 'costumer' %}">Kundenkartei</a></div>
-        <div class="col nav-col"><a href="{% url 'profile' %}">Mitarbeitername</a></div>
-      </div>
-    </section>
-    <section class="row content">
-      <div class="col-8">
-        <div class="row">
-          <div class="col-6 select-category-1">
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Alle</label></div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Damen</label></div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Herren</label></div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4"><label class="form-check-label" for="formCheck-4">Kinder</label></div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"><label class="form-check-label" for="formCheck-5">Colorationen</label></div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-6"><label class="form-check-label" for="formCheck-6">Specials</label></div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7"><label class="form-check-label" for="formCheck-7">Sonstiges</label></div>
-          </div>
-          <div class="col-6 select-category-2" style="padding: 10px;">
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Alle</label></div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Dienstleistungen</label></div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Produkte</label></div>
-          </div>
-          <div class="col-12">
+<section id="body">
+    <div class="container">
+        <div class="col-12">
             <div class="row pattern">
               <a href="#" class="col-4 pattern-element">
                 <p class="product-name">D1</p>
@@ -100,72 +84,129 @@
               </a>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-4">
+    </div>
+    <div class="container div-cart-calculator">
         <div class="row">
-          <div class="col">
-            <div class="row cart">
-              <div class="col-12">
-                <p class="cart-header">Warenkorb</p>
-              </div>
-              <div class="col-12 card-row cart-element">
-                <p class="card-element cart-element-quantity">1x</p>
-                <p class="card-element cart-element-name">D1</p>
-                <p class="card-element cart-element-price">19.99€</p>
-                <a class="card-element cart-element-delete" href="#">
-                  <i class="fa fa-remove card-element"></i>
-                </a>
-              </div>
-              <div class="col-12 card-row cart-element">
-                <p class="card-element cart-element-quantity">1x</p>
-                <p class="card-element cart-element-name">D2</p>
-                <p class="card-element cart-element-price">19.99€</p>
-                <a class="card-element cart-element-delete" href="#">
-                  <i class="fa fa-remove card-element"></i>
-                </a>
-              </div>
-              <div class="col-12 card-row cart-result">
-                <p class="card-element cart-result-price">Gesamt: <span class="get-cart-result-price">39,98</span>€</p>
-                <a class="card-element cart-result-continue" href="{% url 'pay' %}">Zur Kasse gehen<i class="fa fa-chevron-right"></i></a>
-              </div>
+            <div class="col col-cart">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Warenkorb</h4>
+                        <div class="table-responsive">
+                            <table class="table cart-table">
+                                <thead>
+                                    <tr>
+                                        <th>Pos</th>
+                                        <th>Quan.</th>
+                                        <th>Name</th>
+                                        <th>Preis</th>
+                                        <th>Preis</th>
+                                        <th>Entf.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1x</td>
+                                        <td>D1</td>
+                                        <td>19,99€</td>
+                                        <td>19,99€</td>
+                                        <td><a href="#"><i class="fa fa-remove"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>11x</td>
+                                        <td>H1</td>
+                                        <td>19,99€</td>
+                                        <td>429,99€</td>
+                                        <td><a href="#"><i class="fa fa-remove"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>1x</td>
+                                        <td>D1</td>
+                                        <td>19,99€</td>
+                                        <td>19,99€</td>
+                                        <td><a href="#"><i class="fa fa-remove"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col card-row">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="card-element">Insgesamt: 39,98€</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Zahlungsmittel&nbsp;</button>
+                                            <div class="dropdown-menu" role="menu">
+                                                <a class="dropdown-item" role="presentation" href="#">Barzahlung</a>
+                                                <a class="dropdown-item" role="presentation" href="#">Kartenzahlung</a>
+                                                <a class="dropdown-item" role="presentation" href="#">Apple Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-primary" type="button">Zur Kasse gehen&nbsp; &nbsp;<i class="fa fa-chevron-right"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row calculator">
-              <div class="col-12">
-                <p class="calculator-header">Taschenrechner</p>
-              </div>
-              <div class="col-12">
-                <form class="calculator-form">
-                  <input type="text" id="calc-display" />
-                  <br />
-                  <input type="button" class="keys" value="7" onclick="addToScreen('7')" />
-                  <input type="button" class="keys" value="8" onclick="addToScreen('8')" />
-                  <input type="button" class="keys" value="9" onclick="addToScreen('9')" />
-                  <input type="button" class="keys" value="C" onclick="addToScreen('c')" />
-                  <input type="button" class="keys" value="CE" onclick="backspace()" />
-                  <br />
-                  <input type="button" class="keys" value="4" onclick="addToScreen('4')" />
-                  <input type="button" class="keys" value="5" onclick="addToScreen('5')" />
-                  <input type="button" class="keys" value="6" onclick="addToScreen('6')" />
-                  <input type="button" class="keys" value="*" onclick="addToScreen('*')" />
-                  <input type="button" class="keys" value="/" onclick="addToScreen('/')" />
-                  <br />
-                  <input type="button" class="keys" value="1" onclick="addToScreen('1')" />
-                  <input type="button" class="keys" value="2" onclick="addToScreen('2')" />
-                  <input type="button" class="keys" value="3" onclick="addToScreen('3')" />
-                  <input type="button" class="keys" value="+" onclick="addToScreen('+')" />
-                  <input type="button" class="keys" value="-" onclick="addToScreen('-')" />
-                  <br />
-                  <input type="button" class="keys" value="0" onclick="addToScreen('0')" />
-                  <input type="button" class="keys" value="." onclick="addToScreen('.')" />
-                  <input type="button" class="equal" id="key-result" value="=" onclick="result()" />
-                  <a id="toCart" class="keys" onclick="return calculatorToCart();"><i class="fas fa-shopping-cart"></i></a>
-                </form>
-              </div>
+            <div class="col col-calculator">
+                <div class="row">
+                    <div class="col">
+                        <div role="tablist" id="accordion-calculator">
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-calculator .accordion-item" href="#accordion-calculator .accordion-item">Taschenrechner</a>
+                                </div>
+                                <div class="collapse accordion-item" role="tabpanel" data-parent="#accordion-calculator">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col calculator">
+                                                <form class="calculator-form">
+                                                  <input type="text" id="calc-display" />
+                                                  <br />
+                                                  <input type="button" class="keys numbers" value="7" onclick="addToScreen('7')" />
+                                                  <input type="button" class="keys numbers" value="8" onclick="addToScreen('8')" />
+                                                  <input type="button" class="keys numbers" value="9" onclick="addToScreen('9')" />
+                                                  <input type="button" class="keys operators" value="C" onclick="addToScreen('c')" />
+                                                  <input type="button" class="keys operators" value="CE" onclick="backspace()" />
+                                                  <br />
+                                                  <input type="button" class="keys numbers" value="4" onclick="addToScreen('4')" />
+                                                  <input type="button" class="keys numbers" value="5" onclick="addToScreen('5')" />
+                                                  <input type="button" class="keys numbers" value="6" onclick="addToScreen('6')" />
+                                                  <input type="button" class="keys operators" value="*" onclick="addToScreen('*')" />
+                                                  <input type="button" class="keys operators" value="/" onclick="addToScreen('/')" />
+                                                  <br />
+                                                  <input type="button" class="keys numbers" value="1" onclick="addToScreen('1')" />
+                                                  <input type="button" class="keys numbers" value="2" onclick="addToScreen('2')" />
+                                                  <input type="button" class="keys numbers" value="3" onclick="addToScreen('3')" />
+                                                  <input type="button" class="keys operators" value="+" onclick="addToScreen('+')" />
+                                                  <input type="button" class="keys operators" value="-" onclick="addToScreen('-')" />
+                                                  <br />
+                                                  <input type="button" class="keys numbers" value="0" onclick="addToScreen('0')" />
+                                                  <input type="button" class="keys operators" value="." onclick="addToScreen('.')" />
+                                                  <input type="button" class="equal operators" id="key-result" value="=" onclick="result()" />
+                                                  <a id="toCart" class="keys operators" onclick="return calculatorToCart();"><i class="fas fa-shopping-cart"></i></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-  </div>
+    </div>
+</section>
 {% endblock content %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'main/js/calculator.js' %}"></script>
+{% endblock javascript %}
