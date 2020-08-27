@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------
+// to do
+- admin ... der rest
+- analyst
+
+
+----------------------------------------------------------------------------
+// doing
+- login
+- forgot_password
+- register
+- costumer
+
+
+----------------------------------------------------------------------------
+// done
+- base
+
+- cashbox_navbar
+- cashbox_dashboard
+- cashbox_pay
+- cashbox_more
+
+- admin_navbar
+- admin_dashboard
+- admin_products
+- admin_products_detail

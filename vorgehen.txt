@@ -1,0 +1,18 @@
+die base.html datei ist die "basis-html-datei"
+    da drinne sind blocks wie z.B. {% block content %} ... {% endblock content %}
+        - "specific" ist für spezifische css dateien für die jeweilige html seite
+        - "navbar" für die jeweilige navbar
+        - "content" für den jeweiligen html-inhalt
+        - "javascript" ist für spezifische js dateien
+
+die ganzen anderen html-dateien haben {% extends 'base.html' %} ganz oben stehen
+    damit "erben" die html dateien den ganzen kram der in der base.html datei stehen
+
+außerdem steht da
+    - {% load static %} um "statische dateien" benutzen zu können (dazu gehören css, js, bilder, ...)
+        verwendung: {% static "my_app/example.jpg" %}
+    - {% load bootstrap4 %} weiss ich nicht genau ob man das überhaupt braucht aber ich lass es einf drin
+
+ansonsten sind die admin-seiten so aufgebaut, dass man eigentlich nur eine css datei benötigt...
+    ... das funktioniert weil ich die seiten gleich aufbaue ( struktur + class="" + id="" )
+    ... überall wo man den inhalt ändert, habe ich das kommentar <!-- change this content --> eingefügt

@@ -49,57 +49,94 @@
                     <div class="collapse item-1" role="tabpanel" data-parent="#accordion-costumers">
                       <div class="card-body">
                         <form>
-                          <div class="form-row">
+                          <div class="form-row form-row-string">
                             <div class="col">
-                              <div class="form-group"><label for="first_name"><strong>Kundennummer</strong></label><input class="form-control" type="text" placeholder="Kundennummer" name="productname"></div>
+                              <div class="form-group">
+                                  <label for="first_name"><strong>Kundennummer</strong></label>
+                                  <input class="form-control" type="text" placeholder="Kundennummer" name="productname">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-row form-row-string">
+                            <div class="col">
+                              <div class="form-group">
+                                  <label for="first_name"><strong>Vorname</strong></label>
+                                  <input class="form-control" type="text" placeholder="Vorname" name="productname">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-row form-row-string">
+                            <div class="col">
+                              <div class="form-group">
+                                  <label for="first_name"><strong>Nachname</strong></label>
+                                  <input class="form-control" type="text" placeholder="Nachname" name="productname">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-row form-row-string">
+                            <div class="col">
+                              <div class="form-group">
+                                  <label for="first_name"><strong>Telefonnummer</strong></label>
+                                  <input class="form-control" type="text" placeholder="Telefonnummer" name="first_name">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-row form-row-string">
+                            <div class="col">
+                              <div class="form-group">
+                                  <label for="first_name"><strong>E-Mail</strong></label>
+                                  <input class="form-control" type="text" placeholder="E-Mail" name="first_name">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-row form-row-string">
+                            <div class="col">
+                              <div class="form-group">
+                                  <label for="first_name"><strong>Geburtstag</strong></label>
+                                  <input class="form-control" type="text" placeholder="Geburtstag" name="first_name">
+                              </div>
                             </div>
                           </div>
                           <div class="form-row">
                             <div class="col">
-                              <div class="form-group"><label for="first_name"><strong>Vorname</strong></label><input class="form-control" type="text" placeholder="Vorname" name="productname"></div>
+                              <div class="form-group">
+                                  <label for="first_name"><strong>Notizen</strong><br></label>
+                                  <textarea class="form-control" placeholder="Notizen"></textarea>
+                              </div>
                             </div>
                           </div>
-                          <div class="form-row">
-                            <div class="col">
-                              <div class="form-group"><label for="first_name"><strong>Nachname</strong></label><input class="form-control" type="text" placeholder="Nachname" name="productname"></div>
+                          <div class="form-row form-row-submit">
+                        <div class="col">
+                            <button class="btn btn-primary btn-sm" type="submit">Speichern</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Löschen</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Löschen bestätigen</button>
+                        </div>
+                    </div>
+                          <div class="form-row form-row-alert">
+                                <div class="col">
+                                    <div class="alert alert-warning" role="alert"><span><strong>Zum Löschen, bitte bestätigen!</strong></span></div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="form-row">
-                            <div class="col">
-                              <div class="form-group"><label for="first_name"><strong>Telefonnummer</strong></label><input class="form-control" type="text" placeholder="Telefonnummer" name="first_name"></div>
+                          <div class="form-row form-row-alert">
+                                <div class="col">
+                                    <div class="alert alert-success" role="alert"><span><strong>Settings is saved successfully!</strong></span></div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="form-row">
-                            <div class="col">
-                              <div class="form-group"><label for="first_name"><strong>E-Mail</strong></label><input class="form-control" type="text" placeholder="E-Mail" name="first_name"></div>
+                          <div class="form-row form-row-alert">
+                                <div class="col">
+                                    <div class="alert alert-success" role="alert"><span><strong>Item is deleted successfully!</strong></span></div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="form-row">
-                            <div class="col">
-                              <div class="form-group"><label for="first_name"><strong>Geburtstag</strong></label><input class="form-control" type="text" placeholder="Geburtstag" name="first_name"></div>
+                          <div class="form-row form-row-alert">
+                                <div class="col">
+                                    <div class="alert alert-danger" role="alert"><span><strong>Settings could not be saved!</strong></span></div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="form-row">
-                            <div class="col">
-                              <div class="form-group"><label for="first_name"><strong>Notizen</strong><br></label><textarea class="form-control" placeholder="Notizen"></textarea></div>
+                          <div class="form-row form-row-alert">
+                                <div class="col">
+                                    <div class="alert alert-danger" role="alert"><span><strong>Item could not be deleted!</strong><br></span></div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="form-group">
-                              <button class="btn btn-primary btn-sm" type="submit">Save Settings</button>
-                              <button class="btn btn-primary btn-sm" type="submit">Löschen</button>
-                          </div>
-                          <div class="form-group">
-                            <div class="alert alert-success" role="alert"><span><strong>Settings is saved successfully!</strong></span></div>
-                          </div>
-                          <div class="form-group">
-                            <div class="alert alert-success" role="alert"><span><strong>Item is deleted successfully!</strong></span></div>
-                          </div>
-                          <div class="form-group">
-                            <div class="alert alert-danger" role="alert"><span><strong>Settings could not be saved!</strong></span></div>
-                          </div>
-                          <div class="form-group">
-                            <div class="alert alert-danger" role="alert"><span><strong>Item could not be deleted!</strong><br></span></div>
-                          </div>
                         </form>
                       </div>
                     </div>
