@@ -24,7 +24,7 @@
   padding-bottom: 0;
 }
 .div-cart-calculator .row .col-cart .card-body .card-title {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
 }
 .div-cart-calculator .row .col-cart .card-body .cart-table tr, .div-cart-calculator .row .col-cart .card-body .cart-table th, .div-cart-calculator .row .col-cart .card-body .cart-table td {
@@ -78,7 +78,7 @@
 }
 .div-cart-calculator .row .col-calculator .row .col .card-header a {
   margin-bottom: 0;
-  font-size: 24px;
+  font-size: 20px;
   color: #000;
 }
 
