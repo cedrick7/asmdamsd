@@ -108,7 +108,7 @@ def admin_attributes_detail_view(request, *args, **kwargs):
     return render(request, "admin_attributes_detail.html", {})
 
 def admin_discounts_view(request, *args, **kwargs):
-    return render(request, "admin_discountss.html", {})
+    return render(request, "admin_discounts.html", {})
 
 def admin_discounts_detail_view(request, *args, **kwargs):
     return render(request, "admin_discounts_detail.html", {})
