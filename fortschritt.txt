@@ -5,15 +5,17 @@
 
 ----------------------------------------------------------------------------
 // doing
-- login
-- forgot_password
-- register
 - costumer
 
 
 ----------------------------------------------------------------------------
 // done
 - base
+
+- login
+- forgot_password
+- change_password
+- register
 
 - cashbox_navbar
 - cashbox_dashboard

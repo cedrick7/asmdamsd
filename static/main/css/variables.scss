@@ -45,11 +45,18 @@ $links-color-active: $color-blue-active;
 // buttons:
 .btn-primary {
   background-color: $links-color;
+  color: $color-white;
+
   &:hover, &:focus {
     background-color: $color-blue-hover;
   }
   &:active {
     background-color: $color-blue-active;
+  }
+
+  .fa {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 

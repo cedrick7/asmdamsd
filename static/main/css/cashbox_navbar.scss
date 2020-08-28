@@ -51,6 +51,11 @@ header {
                 font-weight: $font-weight-regular;
               }
 
+              .fa {
+                padding-left: 10px;
+                padding-right: 10px;
+              }
+
               .nav-link {
                 margin: 0;
                 font-family: $font-stack;
@@ -68,6 +73,11 @@ header {
                   text-decoration: none;
                   cursor: pointer;
                   color: $links-color-active;
+                }
+
+                .fa {
+                  padding-left: 10px;
+                  padding-right: 10px;
                 }
               }
             }
