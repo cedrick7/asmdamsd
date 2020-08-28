@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from pages.views import auth_login_view, auth_register_view, auth_forgot_password_view, auth_change_password_view,\
-                        costumer_view, profile_view,\
+                        all_costumer_view, all_profile_view,\
                         cashbox_dashboard_view, cashbox_pay_view, cashbox_more_view,\
                         admin_dashboard_view, admin_products_view, admin_products_detail_view, admin_services_view, admin_services_detail_view, admin_categories_view, admin_categories_detail_view, admin_attributes_view, admin_attributes_detail_view, admin_discounts_view, admin_discounts_detail_view, admin_employees_view, admin_employees_detail_view, admin_invoices_view, admin_invoices_detail_view, admin_services_view, admin_services_detail_view, admin_cashboxes_view, admin_safes_view, admin_backups_view, admin_backups_detail_view, admin_payments_view, admin_requests_view,\
                         analyst_dashboard_view, analyst_sales_view, analyst_costumers_view, analyst_employees_view
@@ -30,8 +30,8 @@ urlpatterns = [
     path('forgot_password/', auth_forgot_password_view, name='forgot_password'),
     path('change_password/', auth_change_password_view, name='change_password'),
 
-    path('costumer/', costumer_view, name='costumer'),
-    path('profile/', profile_view, name='profile'),
+    path('costumer/', all_costumer_view, name='costumer'),
+    path('profile/', all_profile_view, name='profile'),
 
     path('kasse/', cashbox_dashboard_view, name='cashbox_dashboard'),
     path('kasse/pay/', cashbox_pay_view, name='pay'),

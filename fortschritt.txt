@@ -1,21 +1,24 @@
 ----------------------------------------------------------------------------
 // to do
 - analyst
+- all_profile
 
 
 ----------------------------------------------------------------------------
 // doing
-- costumer
+- ...
 
 
 ----------------------------------------------------------------------------
 // done
 - base
 
-- login
-- forgot_password
-- change_password
-- register
+- all_costumer
+
+- auth_login
+- auth_forgot_password
+- auth_change_password
+- auth_register
 
 - cashbox_navbar
 - cashbox_dashboard

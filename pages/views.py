@@ -33,11 +33,11 @@ def auth_change_password_view(request, *args, **kwargs):
     # a list of all the costumers and their information
     # profile information
 
-def costumer_view(request, *args, **kwargs):
-    return render(request, "costumer.html", {})
+def all_costumer_view(request, *args, **kwargs):
+    return render(request, "all_costumer.html", {})
 
-def profile_view(request, *args, **kwargs):
-    return render(request, "profile.html", {})
+def all_profile_view(request, *args, **kwargs):
+    return render(request, "all_profile.html", {})
 
 
 # -------------------------------------------------------------------------
