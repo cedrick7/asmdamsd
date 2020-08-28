@@ -7,6 +7,10 @@
 //@media (min-width: 1200px) { ... }  // Extra large devices (large desktops, 1200px and up)
 
 #body {
+  .container-fluid {
+    margin-bottom: $space-between;
+  }
+
   .heading {
     margin-bottom: $space-between;
 
@@ -36,6 +40,8 @@
   }
 
   .content {
+    margin-bottom: $space-between;
+
     .card {
       box-shadow: $card-box-shadow;
 

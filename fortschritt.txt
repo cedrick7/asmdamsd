@@ -1,15 +1,5 @@
 ----------------------------------------------------------------------------
 // to do
-- admin ... der rest
-- admin_services
-- admin_services_detail
-- admin_cashboxes
-- admin_safes
-- admin_backups
-- admin_backups_detail
-- admin_payments
-- admin_requests
-
 - analyst
 
 
@@ -46,3 +36,9 @@
 - admin_employees_detail
 - admin_invoices
 - admin_invoices_detail
+- admin_cashboxes
+- admin_safes
+- admin_backups
+- admin_backups_detail
+- admin_payments
+- admin_requests

@@ -16,3 +16,5 @@ außerdem steht da
 ansonsten sind die admin-seiten so aufgebaut, dass man eigentlich nur eine css datei benötigt...
     ... das funktioniert weil ich die seiten gleich aufbaue ( struktur + class="" + id="" )
     ... überall wo man den inhalt ändert, habe ich das kommentar <!-- change this content --> eingefügt
+
+um seiten zu verlinken benutzt man <a href="{% url 'costumer' %}" ...> man benutzt den namen aus urls.py

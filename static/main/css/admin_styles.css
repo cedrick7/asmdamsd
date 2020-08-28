@@ -9,6 +9,9 @@
   background-color: #0043E0;
 }
 
+#body .container-fluid {
+  margin-bottom: 10px;
+}
 #body .heading {
   margin-bottom: 10px;
 }
@@ -33,6 +36,9 @@
 }
 #body .heading .btn i {
   color: #fff;
+}
+#body .content {
+  margin-bottom: 10px;
 }
 #body .content .card {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
